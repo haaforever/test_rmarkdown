@@ -1,0 +1,15 @@
+---
+title: "Test 2"
+output: github_document
+---
+
+# Second test
+
+```{r}
+library("RMySQL")
+library(knitr)
+con.db <- dbConnect(drv = MySQL(), user = "iguana", password = "mlmobiis!", host = "192.168.100.189", dbname = "Haji")
+dbListTables(con.db)
+dt.tp1.v5 <- dbGetQuery(conn = con.db, statement = "SELECT * FROM MTV_viralref_duplicated")
+kable(dt.tp1.v5[1:30,])
+```
