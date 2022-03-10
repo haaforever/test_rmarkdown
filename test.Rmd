@@ -1,0 +1,15 @@
+---
+title: "Test"
+output: github_document
+---
+
+
+# Test 1
+```{r}
+plot(iris)
+```
+
+# Test 2
+```{r}
+mtcars
+```
